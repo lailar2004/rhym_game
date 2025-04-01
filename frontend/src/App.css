@@ -1,0 +1,266 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Game Container */
+.game-container {
+  margin-top: 80px; /* Prevent overlap with navbar */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title */
+/* Move Title Up and Make It Bigger */
+h1 {
+  font-size: 42px; /* Bigger title */
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-top: 20px; /* Move title up */
+}
+
+/* Fix Score Box Position */
+.score-box {
+  position: absolute;
+  top: 120px; /* Lowered so it doesn’t hide behind navbar */
+  right: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #1e3a8a;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Word Box */
+.word-box {
+  background: #1976d2;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 25px 60px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  width: 70%;
+  justify-content: center;
+}
+
+.word-box:hover {
+  transform: scale(1.05);
+}
+
+/* Sound Button */
+.speak-button {
+  background: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease;
+}
+
+.speak-button:hover {
+  background: #bbdefb;
+}
+
+/* Options Container */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+}
+
+/* Option Buttons */
+.option-item button {
+  padding: 18px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  background: white;
+  border: 3px solid #1976d2;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.option-item button:hover {
+  background: #1976d2;
+  color: white;
+}
+
+/* Disabled Buttons */
+.option-item button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Correct/Wrong Message */
+.message {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 25px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.message:contains("Correct") {
+  background: #d4edda;
+  color: #155724;
+}
+
+.message:contains("Wrong") {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Next Word Button */
+.next-button {
+  margin-top: 30px;
+  padding: 18px 40px;
+  font-size: 26px;
+  font-weight: bold;
+  background: #1565c0;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.next-button:hover {
+  background: #0d47a1;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e3a8a;
+  color: white;
+  padding: 15px 40px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 15px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: #0d47a1;
+  border-radius: 5px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e3a8a;
+  color: white;
+  padding: 15px 40px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  position: fixed;  /* Make it stay at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;  /* Ensure it stays above everything */
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 15px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: #0d47a1;
+  border-radius: 5px;
+}
+
+/* Adjust the game container to avoid overlap */
+.game-container {
+  margin-top: 80px; /* Push it down so it doesn't overlap with the navbar */
+  text-align: center;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .game-container {
+    margin-top: 100px; /* Extra margin for mobile */
+  }
+}
+
